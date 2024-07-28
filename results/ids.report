@@ -1,0 +1,23 @@
+
+        =================== IDS Report ===================
+        Total # of input packets: 15
+        Total # of output packets: 3
+        Total # of ARP Query requests: 1
+        Total # of ARP Reply: 0
+        Total # of ICMP Packets Received: 0
+        Total # of TCP Packets Received: 0
+        Total # of IP Packets Dropped: 0
+        Total # of HTTP POST Allowed: 0
+        Total # of HTTP PUT Packets : 0
+        Total # of HTTP DELETE Packets Dropped: 0
+        Total # of HTTP GET Packets Dropped: 0
+        Total # of HTTP HEAD Packets Dropped: 0
+        Total # of HTTP OPTIONS Packets Dropped: 0
+        Total # of HTTP CONNECT Packets Dropped: 0
+        Total # of HTTP TRACE Packets Dropped: 0
+        Total # of HTTP Packets Dropped: 0
+        Total # of PUT Packets with know injections 0
+        Total # of PUT Packets that were legal: 0
+        Total # of dropped packets: 16
+        ==================================================
+        

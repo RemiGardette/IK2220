@@ -1,0 +1,201 @@
+*** Adding hosts
+
+*** Adding web servers
+
+*** Adding switches
+
+*** Adding click modules
+
+*** Adding firewalls
+
+*** Adding middleboxes
+
+*** Adding NFV
+
+*** Creating Public Zone links
+
+*** Creating DmZ links
+
+*** Creating DmZ links
+
+*** Creating Private Zone links
+
+********** Tests results, pings from h1 (Passed means the expected behaviour is happening): 
+
+`ping 100.0.0.11 -c 1 >/dev/null 2>&1; echo $?` on h1 to h2 with expected=True
+`ping 100.0.0.50 -c 1 >/dev/null 2>&1; echo $?` on h1 to h3 with expected=False
+`ping 100.0.0.51 -c 1 >/dev/null 2>&1; echo $?` on h1 to h4 with expected=False
+`ping 100.0.0.40 -c 1 >/dev/null 2>&1; echo $?` on h1 to ws1 with expected=False
+`ping 100.0.0.41 -c 1 >/dev/null 2>&1; echo $?` on h1 to ws2 with expected=False
+`ping 100.0.0.42 -c 1 >/dev/null 2>&1; echo $?` on h1 to ws3 with expected=False
+Test h1 ping h2: Failed
+Test h1 ping h3: Passed
+Test h1 ping h4: Passed
+Test h1 ping ws1: Passed
+Test h1 ping ws2: Passed
+Test h1 ping ws3: Passed
+
+********** Tests results, pings from h2 (Passed means the expected behaviour is happening): 
+
+`ping 100.0.0.10 -c 1 >/dev/null 2>&1; echo $?` on h2 to h1 with expected=True
+`ping 100.0.0.50 -c 1 >/dev/null 2>&1; echo $?` on h2 to h3 with expected=False
+`ping 100.0.0.51 -c 1 >/dev/null 2>&1; echo $?` on h2 to h4 with expected=False
+`ping 100.0.0.40 -c 1 >/dev/null 2>&1; echo $?` on h2 to ws1 with expected=False
+`ping 100.0.0.41 -c 1 >/dev/null 2>&1; echo $?` on h2 to ws2 with expected=False
+`ping 100.0.0.42 -c 1 >/dev/null 2>&1; echo $?` on h2 to ws3 with expected=False
+Test h2 ping h1: Passed
+Test h2 ping h3: Passed
+Test h2 ping h4: Passed
+Test h2 ping ws1: Passed
+Test h2 ping ws2: Passed
+Test h2 ping ws3: Passed
+
+********** Tests results, pings from h3 (Passed means the expected behaviour is happening): 
+
+`ping 100.0.0.10 -c 1 >/dev/null 2>&1; echo $?` on h3 to h1 with expected=True
+`ping 100.0.0.11 -c 1 >/dev/null 2>&1; echo $?` on h3 to h2 with expected=True
+`ping 100.0.0.51 -c 1 >/dev/null 2>&1; echo $?` on h3 to h4 with expected=True
+`ping 100.0.0.40 -c 1 >/dev/null 2>&1; echo $?` on h3 to ws1 with expected=False
+`ping 100.0.0.41 -c 1 >/dev/null 2>&1; echo $?` on h3 to ws2 with expected=False
+`ping 100.0.0.42 -c 1 >/dev/null 2>&1; echo $?` on h3 to ws3 with expected=False
+Test h3 ping h1: Failed
+Test h3 ping h2: Failed
+Test h3 ping h4: Passed
+Test h3 ping ws1: Passed
+Test h3 ping ws2: Passed
+Test h3 ping ws3: Passed
+
+********** Tests results, pings from h4 (Passed means the expected behaviour is happening): 
+
+`ping 100.0.0.10 -c 1 >/dev/null 2>&1; echo $?` on h4 to h1 with expected=True
+`ping 100.0.0.11 -c 1 >/dev/null 2>&1; echo $?` on h4 to h2 with expected=True
+`ping 100.0.0.50 -c 1 >/dev/null 2>&1; echo $?` on h4 to h3 with expected=True
+`ping 100.0.0.40 -c 1 >/dev/null 2>&1; echo $?` on h4 to ws1 with expected=False
+`ping 100.0.0.41 -c 1 >/dev/null 2>&1; echo $?` on h4 to ws2 with expected=False
+`ping 100.0.0.42 -c 1 >/dev/null 2>&1; echo $?` on h4 to ws3 with expected=False
+Test h4 ping h1: Failed
+Test h4 ping h2: Failed
+Test h4 ping h3: Passed
+Test h4 ping ws1: Passed
+Test h4 ping ws2: Passed
+Test h4 ping ws3: Passed
+
+********** Tests results, curls from h1 (Passed means the expected behaviour is happening): 
+
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected 0
+Test h1 curl h2: Passed
+Test h1 curl h3: Passed
+Test h1 curl h4: Passed
+Test h1 curl ws1: Failed
+Test h1 curl ws2: Failed
+Test h1 curl ws3: Failed
+
+********** Tests results, curls from h2 (Passed means the expected behaviour is happening): 
+
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h2 returned 28, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h2 returned 28, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h2 returned 28, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h2 returned 28, expected 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h2 returned 28, expected 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h2 returned 28, expected 0
+Test h2 curl h1: Passed
+Test h2 curl h3: Passed
+Test h2 curl h4: Passed
+Test h2 curl ws1: Failed
+Test h2 curl ws2: Failed
+Test h2 curl ws3: Failed
+
+********** Tests results, curls from h3 (Passed means the expected behaviour is happening): 
+
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h3 returned 7, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h3 returned 7, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h3 returned 7, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h3 returned 7, expected 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h3 returned 7, expected 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h3 returned 7, expected 0
+Test h3 curl h1: Passed
+Test h3 curl h2: Passed
+Test h3 curl h4: Passed
+Test h3 curl ws1: Failed
+Test h3 curl ws2: Failed
+Test h3 curl ws3: Failed
+
+********** Tests results, curls from h4 (Passed means the expected behaviour is happening): 
+
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h4 returned 7, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h4 returned 7, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h4 returned 7, expected > 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h4 returned 7, expected 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h4 returned 7, expected 0
+`curl --connect-timeout 50 --max-time 100 -X GET -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h4 returned 7, expected 0
+Test h4 curl h1: Passed
+Test h4 curl h2: Passed
+Test h4 curl h3: Passed
+Test h4 curl ws1: Failed
+Test h4 curl ws2: Failed
+Test h4 curl ws3: Failed
+
+********** Tests results, ping to virtual IP: 100.0.0.45
+`ping 100.0.0.45 -c 1 >/dev/null 2>&1; echo $?` on h1 to 100.0.0.45 with expected=True
+`ping 100.0.0.45 -c 1 >/dev/null 2>&1; echo $?` on h2 to 100.0.0.45 with expected=True
+`ping 100.0.0.45 -c 1 >/dev/null 2>&1; echo $?` on h3 to 100.0.0.45 with expected=True
+`ping 100.0.0.45 -c 1 >/dev/null 2>&1; echo $?` on h4 to 100.0.0.45 with expected=True
+Test h1 ping 100.0.0.45: Failed
+Test h2 ping 100.0.0.45: Failed
+Test h3 ping 100.0.0.45: Failed
+Test h4 ping 100.0.0.45: Failed
+
+
+Ping matrix (read first column host can/cannot contact the other column hosts, n/a means untested behaviour or uncorrect behaviour): 
+['   -   ', '  h1:  ', '  h2:  ', '  h3:  ', '  h4:  ', '  ws1: ', '  ws2: ', '  ws3: ']
+['  h1:  ', '   -   ', '  n/a  ', 'Blocked', 'Blocked', 'Blocked', 'Blocked', 'Blocked']
+['  h2:  ', 'Allowed', '   -   ', 'Blocked', 'Blocked', 'Blocked', 'Blocked', 'Blocked']
+['  h3:  ', '  n/a  ', '  n/a  ', '   -   ', 'Allowed', 'Blocked', 'Blocked', 'Blocked']
+['  h4:  ', '  n/a  ', '  n/a  ', 'Allowed', '   -   ', 'Blocked', 'Blocked', 'Blocked']
+['  ws1: ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '   -   ', '  n/a  ', '  n/a  ']
+['  ws2: ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '   -   ', '  n/a  ']
+['  ws3: ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '   -   ']
+
+
+Curl matrix (read first column host can/cannot contact the other column hosts, n/a means untested behaviour or uncorrect behaviour): 
+['   -   ', '  h1:  ', '  h2:  ', '  h3:  ', '  h4:  ', '  ws1: ', '  ws2: ', '  ws3: ']
+['  h1:  ', '   -   ', 'Blocked', 'Blocked', 'Blocked', '  n/a  ', '  n/a  ', '  n/a  ']
+['  h2:  ', 'Blocked', '   -   ', 'Blocked', 'Blocked', '  n/a  ', '  n/a  ', '  n/a  ']
+['  h3:  ', 'Blocked', 'Blocked', '   -   ', 'Blocked', '  n/a  ', '  n/a  ', '  n/a  ']
+['  h4:  ', 'Blocked', 'Blocked', 'Blocked', '   -   ', '  n/a  ', '  n/a  ', '  n/a  ']
+['  ws1: ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '   -   ', '  n/a  ', '  n/a  ']
+['  ws2: ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '   -   ', '  n/a  ']
+['  ws3: ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '  n/a  ', '   -   ']
+
+
+`curl --connect-timeout 50 --max-time 100 -X "GET" -d "" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with method GET: Passed
+`curl --connect-timeout 50 --max-time 100 -X "POST" -d "" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected 0
+Test h1 curl ws1 with method POST: Failed
+`curl --connect-timeout 50 --max-time 100 -X "PUT" -d "" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected 0
+Test h1 curl ws1 with method PUT: Failed
+`curl --connect-timeout 50 --max-time 100 -X "DELETE" -d "" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with method DELETE: Passed
+`curl --connect-timeout 50 --max-time 100 -X "TRACE" -d "" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with method TRACE: Passed
+`curl --connect-timeout 50 --max-time 100 -X "OPTIONS" -d "" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with method OPTIONS: Passed
+`curl --connect-timeout 50 --max-time 100 -X "CONNECT" -d "" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with method CONNECT: Passed
+`curl --connect-timeout 50 --max-time 100 -X "HEAD" -d "" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with method HEAD: Passed
+`curl --connect-timeout 50 --max-time 100 -X "PUT" -d "cat /etc/passwd" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with payload cat /etc/passwd: Passed
+`curl --connect-timeout 50 --max-time 100 -X "PUT" -d "cat /var/log/" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with payload cat /var/log/: Passed
+`curl --connect-timeout 50 --max-time 100 -X "PUT" -d "UPDATE" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with payload UPDATE: Passed
+`curl --connect-timeout 50 --max-time 100 -X "PUT" -d "INSERT" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with payload INSERT: Passed
+`curl --connect-timeout 50 --max-time 100 -X "PUT" -d "DELETE" -s 100.0.0.45:80 > /dev/null 2>&1; echo $?` on h1 returned 28, expected > 0
+Test h1 curl ws1 with payload DELETE: Passed

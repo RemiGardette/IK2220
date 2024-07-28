@@ -1,0 +1,1878 @@
+make[1]: Entering directory '/Shared'
+starting the baseController!
+cp -r ./applications/sdn/* /opt/pox/
+cp -r ./applications/nfv/* /opt/pox/
+python /opt/pox/pox.py baseController
+POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
+ * Serving Flask app 'webserver'
+ * Debug mode: off
+Click LoadBalancer on lb1-eth1 lb1-eth2
+Device with DPID 3 connected
+SWITCH connected
+Device with DPID 2 connected
+SWITCH connected
+Device with DPID 8 connected
+NAPT connected
+Started Click napt
+Device with DPID 4 connected
+SWITCH connected
+Device with DPID 7 connected
+Load Balancer connected
+Started Click process for Load Balancer
+Device with DPID 5 connected
+FW1 connected
+Device with DPID 1 connected
+SWITCH connected
+Device with DPID 6 connected
+FW2 connected
+Device with DPID 9 connected
+IDS connected
+Launching click with command sudo click /opt/pox/ext/ids.click  &
+Click launched with PID 14492
+MAC 00:00:00:00:00:01 added to dictionary at 2024-05-21T15:37:33.613251
+MAC ae:87:67:30:27:23 added to dictionary at 2024-05-21T15:37:33.613660
+MAC 00:00:00:00:00:02 added to dictionary at 2024-05-21T15:37:33.654741
+MAC 4a:ba:da:85:63:10 added to dictionary at 2024-05-21T15:37:33.654969
+MAC e6:c1:c8:f6:b7:8a added to dictionary at 2024-05-21T15:37:33.682904
+MAC a6:e2:bd:9e:d9:c3 added to dictionary at 2024-05-21T15:37:33.778446
+MAC 36:08:33:02:b3:84 added to dictionary at 2024-05-21T15:37:33.871292
+MAC 3e:09:1e:7d:c3:d0 added to dictionary at 2024-05-21T15:37:34.032608
+MAC 9e:e9:d3:c5:74:97 added to dictionary at 2024-05-21T15:37:34.196303
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.10
+Source Port: n/a
+Destination IP: 100.0.0.50
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.10
+Source Port: n/a
+Destination IP: 100.0.0.51
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.10
+Source Port: n/a
+Destination IP: 100.0.0.40
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.10
+Source Port: n/a
+Destination IP: 100.0.0.41
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.10
+Source Port: n/a
+Destination IP: 100.0.0.42
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.11
+Source Port: n/a
+Destination IP: 100.0.0.50
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.11
+Source Port: n/a
+Destination IP: 100.0.0.51
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.11
+Source Port: n/a
+Destination IP: 100.0.0.40
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.11
+Source Port: n/a
+Destination IP: 100.0.0.41
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.11
+Source Port: n/a
+Destination IP: 100.0.0.42
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 False ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+MAC 10:10:a0:a0:07:07 added to dictionary at 2024-05-21T15:41:03.593702
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 42484
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 42484
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 38416
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 38416
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 41140
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 41140
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 44380
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 44380
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 41164
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 41164
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 55960
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 55960
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 42490
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 42490
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 46370
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 46370
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 54266
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 54266
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 39534
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 39534
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 53170
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 53170
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 45852
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.11
+Source Port: 45852
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.10
+Source Port: n/a
+Destination IP: 100.0.0.45
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: ICMP
+Source IP: 100.0.0.11
+Source Port: n/a
+Destination IP: 100.0.0.45
+Destination Port: n/a 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 False
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 37122
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 37122
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 37134
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 37134
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 47982
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 47982
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 55390
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 55390
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 49668
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 49668
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 52112
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 52112
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 41194
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 41194
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 36758
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 36758
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 45998
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 45998
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 43640
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 43640
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 43718
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 43718
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 42274
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 UDP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  UDP False ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  2 any 100.0.0.10/31 any 100.0.0.45/32 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any any True
+Rule did not match
+Rule:  1 any 100.0.0.10/31 any any any block
+Rule matched 
+
+Packet blocked at  FW1
+********** packet incoming from port:  1  to  FW1
+Packet Characteristics:
+Input Port: 1
+Protocol: TCP
+Source IP: 100.0.0.10
+Source Port: 42274
+Destination IP: 100.0.0.45
+Destination Port: 80 
+
+Format: [input_HW_port, protocol, src_ip, src_port, dst_ip, dst_port, allow/block] 
+
+Rule:  2 any 100.0.0.1/32 any 100.0.0.10/31 any allow
+input port:  1 2 protocol:  any True ip:  100.0.0.1/32 100.0.0.10/31 False ports:  any any True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 80 allow
+80 80
+input port:  1 2 protocol:  TCP True ip:  100.0.0.10/31 100.0.0.45/32 True ports:  any 80 True
+Rule did not match
+Rule:  2 TCP 100.0.0.10/31 any 100.0.0.45/32 any block
+input port:  1 2 protocol:  make[1]: Leaving directory '/Shared'
